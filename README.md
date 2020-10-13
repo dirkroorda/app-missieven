@@ -4,7 +4,7 @@
 
 [![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/annotation/app-missieven/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/annotation/app-missieven)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.xxx.svg)](https://doi.org/10.5281/zenodo.xxx)
+[![DOI](https://zenodo.org/badge/303635124.svg)](https://zenodo.org/badge/latestdoi/303635124)
 
 This is a
 [Text-Fabric](https://github.com/annotation/text-fabric) app
