@@ -1,0 +1,14 @@
+apiVersion: 3
+dataDisplay: {}
+docs: {}
+interfaceDefaults: {}
+provenanceSpec:
+  corpus: 'General Missives Dutch East India Company 1600-1800'
+  doi: 10.5281/zenodo.xxx
+  org: Dans-labs
+  repo: clariah-gm
+  version: 0.2
+  webBase: http://resources.huygens.knaw.nl/retroboeken/generalemissiven
+  webHint: Show this document on Huygens
+  webUrl: '{webBase}/#page=<1>'
+typeDisplay: {}
