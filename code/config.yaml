@@ -7,8 +7,23 @@ provenanceSpec:
   doi: 10.5281/zenodo.xxx
   org: Dans-labs
   repo: clariah-gm
-  version: 0.2
+  version: 0.3
   webBase: http://resources.huygens.knaw.nl/retroboeken/generalemissiven
   webHint: Show this document on Huygens
   webUrl: '{webBase}/#page=<2>&source=<1>'
+  webOffset:
+    2:
+      1: 23
+      2: 13
+      3: 13
+      4: 15
+      5: 15
+      6: 15
+      7: 11
+      8: 11
+      9: 13
+      10: 11
+      11: 11
+      12: 11
+      13: 11
 typeDisplay: {}
