@@ -1,13 +1,29 @@
 apiVersion: 3
-dataDisplay: {}
-docs: {}
+dataDisplay:
+  textFormats:
+    layout-full: 
+      method: layoutFull
+    layout-full-notes: 
+      method: layoutFullNotes
+    layout-remark:
+      method:  layoutRemark
+    layout-remark-notes:
+      method:  layoutRemarkNotes
+    layout-orig:
+      method:  layoutOrig
+    layout-orig-notes:
+      method:  layoutOrigNotes
+docs:
+  docPage: transcription
+  featureBase: 'https://github.com/{org}/{repo}/blob/master/docs/transcription{docExt}'
+  featurePage: ''
 interfaceDefaults: {}
 provenanceSpec:
   corpus: 'General Missives Dutch East India Company 1600-1800'
   doi: 10.5281/zenodo.xxx
   org: Dans-labs
   repo: clariah-gm
-  version: 0.3
+  version: 0.4
   webBase: http://resources.huygens.knaw.nl/retroboeken/generalemissiven
   webHint: Show this document on Huygens
   webUrl: '{webBase}/#page=<2>&source=<1>'
