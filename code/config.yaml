@@ -20,10 +20,10 @@ docs:
 interfaceDefaults: {}
 provenanceSpec:
   corpus: 'General Missives Dutch East India Company 1600-1800'
-  doi: 10.5281/zenodo.xxx
+  doi: 10.5281/zenodo.4011801
   org: Dans-labs
   repo: clariah-gm
-  version: 0.4
+  version: 0.5
   webBase: http://resources.huygens.knaw.nl/retroboeken/generalemissiven
   webHint: Show this document on Huygens
   webUrl: '{webBase}/#page=<2>&source=<1>'
