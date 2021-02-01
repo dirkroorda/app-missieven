@@ -3,18 +3,16 @@ dataDisplay:
   textFormats:
     layout-full: 
       method: layoutFull
-    layout-noremarks: 
-      method: layoutNoRemarks
-    layout-nonotes: 
-      method: layoutNoNotes
-    layout-nonorig: 
-      method: layoutNonOrig
-    layout-remarks:
-      method:  layoutRemarks
-    layout-notes:
-      method:  layoutNotes
+    layout-full-notes: 
+      method: layoutFullNotes
+    layout-remark:
+      method:  layoutRemark
+    layout-remark-notes:
+      method:  layoutRemarkNotes
     layout-orig:
       method:  layoutOrig
+    layout-orig-notes:
+      method:  layoutOrigNotes
 docs:
   docPage: transcription
   featureBase: 'https://github.com/{org}/{repo}/blob/master/docs/transcription{docExt}'
@@ -25,7 +23,7 @@ provenanceSpec:
   doi: 10.5281/zenodo.4011801
   org: Dans-labs
   repo: clariah-gm
-  version: 0.7
+  version: 0.6
   webBase: http://resources.huygens.knaw.nl/retroboeken/generalemissiven
   webHint: Show this document on Huygens
   webUrl: '{webBase}/#page=<2>&source=<1>'
