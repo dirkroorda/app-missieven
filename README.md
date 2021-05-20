@@ -21,3 +21,34 @@ See also
 [online representation by the HuygensING institute](http://resources.huygens.knaw.nl/retroboeken/generalemissiven/#page=0&accessor=toc&view=homePane)
 
 ![logo](images/logo.png)
+
+# Search interface to-go
+
+We have generated a search interface for the missieven from the Text-Fabric data.
+
+Just click
+[missieven-search](https://annotation.github.io/app-missieven/)
+and off you go.
+
+It is experimental.
+You can do full text search via regular expressions, not only in the full-text,
+but also in attributes of the text.
+
+An example search is in [example.json](example.json).
+Download the file, then import it in your search interface, and you see it happening.
+
+![ls](ls.png)
+
+The interface works completely inside your browser without consulting any server,
+apart from first traveling from GitHub to your browser.
+
+It is written in pure, modern Javascript.
+The corpus is stored in a few javascript variables.
+
+If you want to search completely of line, you can press a button to
+download the complete package as a zipfile from within the app.
+
+You can import and export search jobs as json files.
+You can export search results as tab-separated files.
+
+More info in the [manual](https://annotation.github.io/text-fabric/tf/about/clientmanual.html).
