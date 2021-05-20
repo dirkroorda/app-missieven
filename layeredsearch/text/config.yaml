@@ -1,0 +1,118 @@
+linkLevelMin: 1
+linkLevelMax: 2
+memSavingMethod: 1
+
+short: full-text search in General Missives
+
+description: >-
+  <p>Text-kind aware full-text search in <a id="corpus2link" href="#"></a>.</p>
+  <p>This search interface is by:</p>
+  <ul>
+      <li><a id="author2link" href="#"></a> («author2.role»)
+      <li><a id="author1link" href="#"></a> («author1.role»)
+  </ul>
+
+defaultSettings:
+  autoexec: true
+  nodeseq: true
+  exporthl: true
+  exportsr: true
+  multihl: true
+  simple: false
+
+defaultFlags:
+  i: true
+  m: true
+  s: false
+
+keyboard:
+  '’': apostrophe
+  '‘': inverted single quote
+  '“': inverted double quote
+  '„': opening double quote
+  '”': closing double quote
+  '¬': symbol
+  '—': em-dash
+  '■': square bullet
+  '°': degree
+  'ƒ': florin
+  '®': registered
+  '™': trademark
+  '©': copyright
+  '•': bullet
+  '≤': less than or equal
+  '≥': greater than or equal
+  '∪': union
+  'Ö': O-trema
+  'Ê': E-trema
+  '♦': diamond
+  '►': triangle
+  '⌊': hook bottom left
+  '⌋': hook bottom right
+
+layerSettings:
+  word:
+    description: words (some words do not have a space between them)
+    layers:
+      text:
+        afterFeature: punc
+        default: ¿
+        description: text representation
+        feature: trans
+        pos: null
+        visible: true
+      kind:
+        default: ¿
+        description: text kind
+        feature: kind
+        pos: null
+        visible: true
+  line:
+    description: physical lines in the printed edition
+    focus: true
+    afterDefault: "\n"
+    layers:
+      location:
+        default: -1
+        description: page number:line number within the page
+        feature: n
+        pos: null
+        visible: false
+  letter:
+    description: missives (i.e. letters)
+    afterDefault: "\n"
+    layers:
+      page:
+        default: -1
+        description: starting page number within the book
+        feature: page
+        pos: null
+        visible: false
+      author:
+        default: -1
+        description: full author names
+        feature: authorFull
+        pos: null
+        visible: true
+      date:
+        default: -1
+        description: date as yyyy-mm-dd
+        feature: date
+        pos: null
+        visible: true
+      place:
+        default: -1
+        description: place indication
+        feature: place
+        pos: null
+        visible: true
+  volume:
+    description: physical volume in the printed edition
+    afterDefault: "\n"
+    layers:
+      number:
+        default: -1
+        description: volume number
+        feature: n
+        pos: null
+        visible: false

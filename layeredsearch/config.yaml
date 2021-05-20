@@ -1,0 +1,25 @@
+writing: ""
+
+data:
+  org: Dans-labs
+  repo: clariah-gm
+  rel: tf
+  version: "0.8"
+  docUrl: «ghUrl»/«data.org»/«data.repo»/blob/master/docs/transcription.md
+
+corpus:
+  text: General Missives
+  url: "http://resources.huygens.knaw.nl/retroboeken/generalemissiven/#page=0&accessor=toc&view=homePane"
+  tip: Huygens-ING portal to Missieven
+
+author1:
+  text: Lodewijk Petram
+  role: lead researcher
+  url: "http://resources.huygens.knaw.nl/retroboeken/generalemissiven/#page=0&accessor=toc&view=homePane"
+  tip: lead researcher
+
+author2:
+  text: Dirk Roorda
+  role: data modeler
+  url: "https://pure.knaw.nl/portal/en/persons/dirk-roorda"
+  tip: data modeler
