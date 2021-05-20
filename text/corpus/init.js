@@ -1,0 +1,11 @@
+var corpusData = {}
+corpusData["texts"] = {}
+corpusData["texts"]["word"] = {}
+corpusData["texts"]["line"] = {}
+corpusData["texts"]["letter"] = {}
+corpusData["texts"]["volume"] = {}
+corpusData["posinfo"] = {}
+corpusData["posinfo"]["word"] = {}
+corpusData["posinfo"]["line"] = {}
+corpusData["posinfo"]["letter"] = {}
+corpusData["posinfo"]["volume"] = {}
