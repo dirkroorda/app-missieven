@@ -1469,6 +1469,7 @@ class GuiProvider {
     })
   }
   activateLayers() {
+    const maxShowSize = 5000
     const minChunkSize = 10000
     const maxSteps = 1000
     const getStepSize = size => {
@@ -1481,14 +1482,13 @@ class GuiProvider {
       return Math.round(1 + size / maxSteps)
     }
     const getMaterial = (text, start, stepSize) => {
-      const chunkSize = stepSize == 0 ? text.length : stepSize
+      const chunkSize = Math.max(maxShowSize, stepSize == 0 ? text.length : stepSize)
       return htmlEsc(text.slice(start - 1, start + chunkSize - 1))
     }
     const {
       Corpus: { texts },
     } = this
-    const sliders = $("input.xray")
-    for (const slider of sliders.get()) {
+    const activateLayer = slider => {
       const elem = $(slider)
       const nType = elem.attr("ntype")
       const layer = elem.attr("layer")
@@ -1505,11 +1505,15 @@ class GuiProvider {
         elem.attr("step", stepSize)
         elem.val(1)
         elem.off("change").change(() => {
-          const xpos = elem.val()
+          const xpos = elem.val() >> 0
           const material = getMaterial(text, xpos, stepSize)
           content.html(material)
         })
       }
+    }
+    const sliders = $("input.xray")
+    for (const slider of sliders.get()) {
+      activateLayer(slider)
     }
     const controls = $("button.lyr")
     controls.off("click").click(e => {
@@ -1526,7 +1530,7 @@ class GuiProvider {
         const {
           [nType]: { [layer]: text },
         } = texts
-        const xpos = slider.val()
+        const xpos = slider.val() >> 0
         const stepSize = getStepSize(text.length)
         const material = getMaterial(text, xpos, stepSize)
         content.html(material)

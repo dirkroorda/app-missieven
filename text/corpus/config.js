@@ -15,7 +15,7 @@ const configData = {
   }
  },
  "defs": {
-  "lsVersion": "v073@2021-05-20T14:29:47",
+  "lsVersion": "v074@2021-05-20T16:04:29",
   "dataset": "missieven",
   "client": "text",
   "org": "annotation",
