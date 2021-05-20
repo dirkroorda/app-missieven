@@ -75,7 +75,7 @@ layerSettings:
       location:
         default: -1
         description: page number:line number within the page
-        feature: n
+        feature: textloc
         pos: null
         visible: false
   letter:

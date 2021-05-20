@@ -4,21 +4,22 @@ import collections
 from tf.convert.recorder import Recorder
 
 
-combiV = None
-combiFreqList = None
+def combiFeatures(maker):
+    combiV = getattr(maker, "combiV", None)
+    if combiV is not None:
+        return
 
-
-def combiFeatures(A):
+    A = maker.A
     A.info("Combining features ...")
     api = A.api
     F = api.F
     L = api.L
 
-    global combiV
-    global combiFreqList
-
     combiV = {}
     combiFreqList = {}
+
+    setattr(maker, "combiV", combiV)
+    setattr(maker, "combiFreqList", combiFreqList)
 
     def orNull(x):
         return "" if x is None else x
@@ -58,7 +59,7 @@ def combiFeatures(A):
         page = pages[0] if pages else curPage
         curPage = page
         loc = f"{F.n.v(curPage)}:{F.n.v(ln)}"
-        textloc[w] = loc
+        textloc[ln] = loc
         textlocFreq[loc] += 1
 
     combiV["textloc"] = textloc
@@ -71,9 +72,9 @@ def combiFeatures(A):
     Fmonth = F.month.v
     Fday = F.day.v
 
-    for w in F.otype.s("letter"):
-        d = f"{Fyear(w)}-{Fmonth(w)}-{Fday(w)}"
-        date[w] = d
+    for lt in F.otype.s("letter"):
+        d = f"{Fyear(lt)}-{Fmonth(lt)}-{Fday(lt)}"
+        date[lt] = d
         dateFreq[d] += 1
 
     combiV["date"] = date
@@ -82,8 +83,8 @@ def combiFeatures(A):
 
 def makeLegends(maker):
     A = maker.A
-    if not combiV:
-        combiFeatures(A)
+    combiFeatures(maker)
+    combiFreqList = getattr(maker, "combiFreqList")
 
     api = A.api
     Fs = api.Fs
@@ -116,8 +117,8 @@ def makeLegends(maker):
 
 def record(maker):
     A = maker.A
-    if not combiV:
-        combiFeatures(A)
+    combiFeatures(maker)
+    combiV = getattr(maker, "combiV")
 
     api = A.api
     F = api.F
