@@ -15,7 +15,7 @@ const configData = {
   }
  },
  "defs": {
-  "lsVersion": "v074@2021-05-20T16:04:29",
+  "lsVersion": "v078@2021-06-14T11:33:17",
   "dataset": "missieven",
   "client": "text",
   "org": "annotation",
@@ -103,7 +103,7 @@ const configData = {
    ],
    "package": [
     "download",
-    "text.zip",
+    "../text.zip",
     "zip file for offline use"
    ],
    "writing": [
