@@ -3,8 +3,8 @@
 # General Missives
 
 [![SWH](https://archive.softwareheritage.org/badge/origin/https://github.com/annotation/app-missieven/)](https://archive.softwareheritage.org/browse/origin/?origin_url=https://github.com/annotation/app-missieven)
-
 [![DOI](https://zenodo.org/badge/303635124.svg)](https://zenodo.org/badge/latestdoi/303635124)
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
 This is a
 [Text-Fabric](https://github.com/annotation/text-fabric) app
@@ -52,3 +52,8 @@ You can import and export search jobs as json files.
 You can export search results as tab-separated files.
 
 More info in the [manual](https://annotation.github.io/text-fabric/tf/about/clientmanual.html).
+
+# Author
+
+[Dirk Roorda](https://github.com/dirkroorda)
+
