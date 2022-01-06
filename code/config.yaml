@@ -23,7 +23,7 @@ interfaceDefaults: {}
 provenanceSpec:
   corpus: 'General Missives Dutch East India Company 1600-1800'
   doi: 10.5281/zenodo.4011801
-  org: Dans-labs
+  org: annotation
   repo: clariah-gm
   version: 0.9.1
   webBase: http://resources.huygens.knaw.nl/retroboeken/generalemissiven
